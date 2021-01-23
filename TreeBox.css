@@ -1,0 +1,177 @@
+
+.tree-box * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    --theme-color: DeepSkyBlue;
+	--font-height: 14px;
+	font-size: 13px !important;
+}
+
+.hide{
+    display: none;
+}
+
+.tree-box{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 300px;
+}
+
+.tree-box .tree-box-header {
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+}
+.tree-box .tree-box-label-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px;
+	flex: 1;
+}
+
+.tree-box .tree-box-label-list .tree-box-label{
+    border: 1px solid #ccc;
+    background: var(--theme-color);
+    margin: 2px;
+	padding: 2px;
+	text-align: center;
+	border-radius: 3px;
+	height: var(--font-height);
+	line-height: var(--font-height);
+}
+.tree-box .tree-box-label-list .tree-box-label span{
+    margin: 0em 0.1em;
+    color: #E7F2FC;
+    cursor: pointer;
+}
+
+/* 滚动条样式 开始 */
+.tree-box .tree-box-container *::-webkit-scrollbar {
+    width : 5px;
+    height: 1px;
+}
+.tree-box .tree-box-container *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background   : #535353;
+}
+.tree-box .tree-box-container *::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    border-radius: 5px;
+    background   : #ededed;
+}
+/* 滚动条样式 结束 */
+
+.tree-box .tree-box-container{
+    flex: 1;
+    max-height: 100%;
+    display: flex;
+}
+
+.tree-box input[type=checkbox],
+.tree-box em{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 10px !important;
+	display: inline-block;
+	opacity:1!important;
+}
+.tree-box .box{
+	height: 100%;
+    overflow: auto;
+    flex: 1;
+	float: left;
+	border-right:1px solid #DDDDDD;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.tree-box .box:first-child{
+	border-left: 1px solid #dcdcdc;
+}
+.tree-box ul{
+	margin: 0;
+	padding: 0;
+}
+.tree-box li{
+	list-style-type:none;
+	height: 35px;
+	line-height: 35px;
+	padding:0 10px;
+	cursor: pointer;
+	color:#666666;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+    user-select:none;
+    display: flex;
+}
+.tree-box li:hover,
+.tree-box .cur{
+	background-color: #F4F4F4;
+}
+.tree-box li:hover,
+.tree-box .blue{
+	background-color: #E7F2FC;
+}
+.tree-box .selected{
+	background-color:#66B3FF;
+}
+.tree-box .search{
+	width: 98%;
+	height:90%;
+	border: none;
+}
+
+.tree-box .hide,
+.tree-box .hide2{
+	display: none;
+}
+.tree-box .label-panel{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    float: left;
+    flex: 1; 
+}
+.tree-box label{
+	line-height: 35px;
+	vertical-align: middle;
+	margin:0!important;
+	cursor: pointer;
+}
+.tree-box .children span:before{
+	content: ">";
+	display: block;
+	right: 0px;
+	width: 20px;
+	height: 35px;
+	float: right;
+}
+
+.tree-box .tree-box-clear {
+
+}
+
+/* 清除按钮样式 */
+.tree-box .tree-box-clear .tree-box-clear-all{
+	height: var(--font-height);
+	line-height: var(--font-height);
+	text-align: center;
+	cursor: pointer;
+	margin: 8px;
+	padding: 2px;
+	color: #aaa;
+	display: none;
+}
+
+/* 清除按钮滑动样式 */
+.tree-box .tree-box-clear .tree-box-clear-all:hover{
+	color: #000;
+}
+
+

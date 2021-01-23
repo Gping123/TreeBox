@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreeBox</title>
+    <script src='https://libs.baidu.com/jquery/1.10.2/jquery.min.js'></script>
+    <link type="text/css" href="./TreeBox.css"  rel="stylesheet" />
+    <script src="./TreeBox.js"></script>
+</head>
+<body>
+    <div id="treeBox" style="width: 600px;margin:50px auto;"></div>
+    <script>
+        var t = {};
+        $(()=>{
+            
+            let data = [
+                {"id":"1","name":"地球"},
+                {"id":"1156","name":"中国","parent_id":"1"},
+                {"id":"1157","name":"漂亮国","parent_id":"1"},
+                {"id":"110000","name":"北京市","parent_id":"1156"},
+                {"id":"120000","name":"天津市","parent_id":"1156"},
+                {"id":"810000","name":"香港特别行政区","parent_id":"1156"},
+                {"id":"820000","name":"澳门特别行政区","parent_id":"1156"},
+                {"id":"110100","name":"市辖区","parent_id":"110000"},
+                {"id":"110114","name":"昌平区","parent_id":"110100"},
+                {"id":"110115","name":"大兴区","parent_id":"110100"},
+                {"id":"120100","name":"市辖区","parent_id":"120000"},
+                {"id":"120101","name":"和平区","parent_id":"120100"},
+                {"id":"120102","name":"河东区","parent_id":"120100"},
+                {"id":"130100","name":"石家庄市","parent_id":"130000"},
+                {"id":"130200","name":"唐山市","parent_id":"130000"},
+                {"id":"130300","name":"秦皇岛市","parent_id":"130000"},
+                {"id":"130400","name":"邯郸市","parent_id":"130000"},
+                {"id":"130500","name":"邢台市","parent_id":"130000"},
+                {"id":"130600","name":"保定市","parent_id":"130000"},
+                {"id":"130700","name":"张家口市","parent_id":"130000"},
+                {"id":"130800","name":"承德市","parent_id":"130000"},
+                {"id":"130900","name":"沧州市","parent_id":"130000"},
+                {"id":"131000","name":"廊坊市","parent_id":"130000"},
+                {"id":"131100","name":"衡水市","parent_id":"130000"},
+                {"id":"130101","name":"市辖区","parent_id":"130100"},
+                {"id":"130111","name":"栾城区","parent_id":"130100"},
+                {"id":"130121","name":"井陉县","parent_id":"130100"},
+                {"id":"130131","name":"平山县","parent_id":"130100"},
+                {"id":"130132","name":"元氏县","parent_id":"130100"},
+                {"id":"130133","name":"赵县","parent_id":"130100"},
+                {"id":"130171","name":"石家庄高新技术产业开发区","parent_id":"130100"},
+                {"id":"130172","name":"石家庄循环化工园区","parent_id":"130100"},
+                {"id":"130181","name":"辛集市","parent_id":"130100"},
+                {"id":"130183","name":"晋州市","parent_id":"130100"},
+                {"id":"130184","name":"新乐市","parent_id":"130100"},
+                {"id":"130201","name":"市辖区","parent_id":"130200"},
+                {"id":"130202","name":"路南区","parent_id":"130200"},
+                {"id":"130203","name":"路北区","parent_id":"130200"},
+
+            ];
+            t = new TreeBox('#treeBox', data);
+        });
+    </script>
+</body>
+</html>
