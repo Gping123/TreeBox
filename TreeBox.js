@@ -271,6 +271,9 @@ class TreeBox {
      */
     setValue(id, status)
     {
+        if ($.isNumeric(id)) {
+            id = parseInt(id);
+        }
         if (status) {
             // 设置选择状态
             this.selected.add(id);
